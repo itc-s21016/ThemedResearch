@@ -7,11 +7,11 @@ plugins {
 lifecycleVersion = '2.5.1'*/
 
 android {
-    namespace 'jp.ac.it_college.std.s21016.roomwordsample'
+    namespace 'jp.ac.it_college.std.s21016.ThemedResearch'
     compileSdk 33
 
     defaultConfig {
-        applicationId "jp.ac.it_college.std.s21016.roomwordsample"
+        applicationId "jp.ac.it_college.std.s21016.ThemedResearch"
         minSdk 24
         targetSdk 33
         versionCode 1
