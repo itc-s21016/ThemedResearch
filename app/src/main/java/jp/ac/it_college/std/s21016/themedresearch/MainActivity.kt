@@ -3,7 +3,8 @@ package jp.ac.it_college.std.s21016.themedresearch
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import jp.ac.it_college.std.s21016.themedresearch.databinding.ActivityMainBinding
+import jp.ac.it_college.std.s21016.roomwordsample.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="jp.ac.it_college.std.s21016.roomwordsample.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" />
+    <fragment
+        android:id="@+id/initial_SettingFragment"
+        android:name="jp.ac.it_college.std.s21016.roomwordsample.Initial_SettingFragment"
+        android:label="fragment_initial__setting"
+        tools:layout="@layout/fragment_initial__setting" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="jp.ac.it_college.std.s21016.themedresearch.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="jp.ac.it_college.std.s21016.themedresearch.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/additionFragment"
+        android:name="jp.ac.it_college.std.s21016.themedresearch.AdditionFragment"
+        android:label="fragment_addition"
+        tools:layout="@layout/fragment_addition" />
+    <fragment
+        android:id="@+id/edditFragment"
+        android:name="jp.ac.it_college.std.s21016.themedresearch.EdditFragment"
+        android:label="fragment_eddit"
+        tools:layout="@layout/fragment_eddit" />
+    <fragment
+        android:id="@+id/optionFragment"
+        android:name="jp.ac.it_college.std.s21016.themedresearch.OptionFragment"
+        android:label="fragment_option"
+        tools:layout="@layout/fragment_option" />
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="jp.ac.it_college.std.s21016.themedresearch.SearchResultFragment"
+        android:label="fragment_search_result"
+        tools:layout="@layout/fragment_search_result" />
+</navigation>
