@@ -15,10 +15,19 @@ class MainActivity : AppCompatActivity() {
         //ヘルパーを準備
         val helper = SimpleDatabaseHelper(this)
 
-        //データベースを取得
-        helper.writableDatabase.use { db ->
+        //データベースを取得   ※useを使うとclosedになったため使わないほうが良い
+        /*helper.writableDatabase.use { db ->
             Toast.makeText(this, "接続しました",
             Toast.LENGTH_SHORT).show()
+        }*/
+
+        //ヘルパーでデータベースを呼び出した後に何かしら使えば取得できた
+        helper.writableDatabase.let { db ->
+            Toast.makeText(
+                this, "接続しました",
+                Toast.LENGTH_SHORT
+            ).show()
         }
+
     }
 }
