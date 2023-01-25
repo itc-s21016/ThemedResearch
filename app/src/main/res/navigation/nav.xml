@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/titleFragment"
-        android:name="jp.ac.it_college.std.s21016.roomwordsample.TitleFragment"
+        android:name="jp.ac.it_college.std.s21016.themedresearch.TitleFragment"
         android:label="fragment_title"
         tools:layout="@layout/fragment_title" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/initial_SettingFragment"
-        android:name="jp.ac.it_college.std.s21016.roomwordsample.Initial_SettingFragment"
+        android:name="jp.ac.it_college.std.s21016.themedresearch.InitialSettingFragment"
         android:label="fragment_initial__setting"
         tools:layout="@layout/fragment_initial__setting" >
         <action
