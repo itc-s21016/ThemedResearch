@@ -8,7 +8,7 @@
     tools:context=".TitleFragment">
 
     <TextView
-        android:id="@+id/txTitle"
+        android:id="@+id/txInitial_Setting"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -28,5 +28,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/txInitial_Setting" />
 </androidx.constraintlayout.widget.ConstraintLayout>
