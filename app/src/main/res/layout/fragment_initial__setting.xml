@@ -36,10 +36,11 @@
         android:id="@+id/editTextAddItemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:digits="0123456789"
         android:ems="10"
         android:inputType="number"
-        android:maxLength="5"
+        android:maxLength="7"
         android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,8 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="SpeakableTextPresentCheck"
-        android:autofillHints=""
-        tools:targetApi="o"/>　<!-- 構造上は問題ない警告を消す為のアノテーション -->
+        tools:targetApi="o" />　<!-- 構造上は問題ない警告を消す為のアノテーション -->
 
     <Button
         android:id="@+id/btNext"

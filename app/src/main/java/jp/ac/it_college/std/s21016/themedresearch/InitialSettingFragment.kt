@@ -9,6 +9,8 @@ import androidx.navigation.Navigation
 import jp.ac.it_college.std.s21016.themedresearch.databinding.FragmentInitialSettingBinding
 
 class InitialSettingFragment: Fragment() {
+
+
     private var _binding: FragmentInitialSettingBinding? = null
     private val binding get() = _binding!!
 
@@ -27,4 +29,5 @@ class InitialSettingFragment: Fragment() {
         return binding.root
 
     }
+
 }
