@@ -7,4 +7,13 @@
     <string name="zandaka">残高を入力してください</string>
     <string name="next">次へ</string>
     <string name="start_btn">タップしてスタート</string>
+    <string name="bt_search">検索</string>
+    <string name="bt_edit">編集</string>
+    <string name="bt_addition">追加</string>
+    <string name="bt_configuration">設定</string>
+    <string name="txt_date">日付</string>
+    <string name="txt_expense_item">費目</string>
+    <string name="txt_amount_of_money">金額</string>
+    <string name="txt_income">収入</string>
+    <string name="txt_balance">残高</string>
 </resources>
