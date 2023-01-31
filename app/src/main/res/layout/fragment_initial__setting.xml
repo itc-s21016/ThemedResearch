@@ -47,7 +47,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="SpeakableTextPresentCheck"
-        android:autofillHints="" />
+        android:autofillHints=""
+        tools:targetApi="o"/>　<!-- 構造上は問題ない警告を消す為のアノテーション -->
 
     <Button
         android:id="@+id/btNext"
