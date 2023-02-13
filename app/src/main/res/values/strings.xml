@@ -16,4 +16,7 @@
     <string name="txt_amount_of_money">金額</string>
     <string name="txt_income">収入</string>
     <string name="txt_balance">残高</string>
+    <string name="date_hint">日付を入力してください</string>
+    <string name="expense_item_hint">費目を入力してください</string>
+    <string name="money_hint">金額を入力してください</string>
 </resources>

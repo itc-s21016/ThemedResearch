@@ -11,8 +11,11 @@
         android:label="fragment_title"
         tools:layout="@layout/fragment_title" >
         <action
-            android:id="@+id/action_titleFragment_to_initial_SettingFragment"
+            android:id="@+id/title_to_initial"
             app:destination="@id/initial_SettingFragment" />
+        <action
+            android:id="@+id/title_to_main"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/initial_SettingFragment"

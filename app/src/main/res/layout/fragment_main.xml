@@ -116,7 +116,7 @@
         app:layout_constraintGuide_percent="0.85" />
 
     <Button
-        android:id="@+id/btSearch"
+        android:id="@+id/btSearchMove"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -131,7 +131,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <Button
-        android:id="@+id/btEdit"
+        android:id="@+id/btEditMove"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -146,7 +146,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <Button
-        android:id="@+id/btAddition"
+        android:id="@+id/btAdditionMove"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -161,7 +161,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
     <Button
-        android:id="@+id/btConfiguration"
+        android:id="@+id/btConfigurationMove"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
