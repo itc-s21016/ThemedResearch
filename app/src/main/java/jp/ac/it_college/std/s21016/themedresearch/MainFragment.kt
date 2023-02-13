@@ -19,22 +19,22 @@ class MainFragment: Fragment() {
     ): View? {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
 
-        binding.btSearch.setOnClickListener {
+        binding.btSearchMove.setOnClickListener {
             Navigation.findNavController(it).navigate(
                 MainFragmentDirections.actionMainFragmentToSearchFragment()
             )
         }
-        binding.btEdit.setOnClickListener {
+        binding.btEditMove.setOnClickListener {
             Navigation.findNavController(it).navigate(
                 MainFragmentDirections.actionMainFragmentToEdditFragment()
             )
         }
-        binding.btAddition.setOnClickListener {
+        binding.btAdditionMove.setOnClickListener {
             Navigation.findNavController(it).navigate(
                 MainFragmentDirections.actionMainFragmentToAdditionFragment()
             )
         }
-        binding.btConfiguration.setOnClickListener {
+        binding.btConfigurationMove.setOnClickListener {
             Navigation.findNavController(it).navigate(
                 MainFragmentDirections.actionMainFragmentToOptionFragment()
             )
