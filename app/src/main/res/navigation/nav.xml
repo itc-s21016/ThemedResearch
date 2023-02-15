@@ -43,6 +43,9 @@
         <action
             android:id="@+id/action_mainFragment_to_optionFragment"
             app:destination="@id/optionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_self"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -52,12 +55,19 @@
         <action
             android:id="@+id/action_searchFragment_to_searchResultFragment"
             app:destination="@id/searchResultFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_myDialogFragment"
+            app:destination="@id/myDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/additionFragment"
         android:name="jp.ac.it_college.std.s21016.themedresearch.AdditionFragment"
         android:label="fragment_addition"
-        tools:layout="@layout/fragment_addition" />
+        tools:layout="@layout/fragment_addition" >
+        <action
+            android:id="@+id/action_additionFragment_to_myDialogFragment"
+            app:destination="@id/myDialogFragment" />
+    </fragment>
     <fragment
         android:id="@+id/edditFragment"
         android:name="jp.ac.it_college.std.s21016.themedresearch.EdditFragment"
@@ -77,4 +87,8 @@
             android:id="@+id/action_searchResultFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/myDialogFragment"
+        android:name="jp.ac.it_college.std.s21016.themedresearch.MyDialogFragment"
+        android:label="MyDialogFragment" />
 </navigation>
