@@ -19,4 +19,5 @@
     <string name="date_hint">日付を入力してください</string>
     <string name="expense_item_hint">費目を入力してください</string>
     <string name="money_hint">金額を入力してください</string>
+    <string name="date_format">%1$4d/%2$02d/%3$02d</string>
 </resources>

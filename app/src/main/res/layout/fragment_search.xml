@@ -7,25 +7,6 @@
     tools:context=".SearchFragment">
 
     <EditText
-        android:id="@+id/showDate2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="48dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:focusable="false"
-        android:hint="@string/expense_item_hint"
-        android:inputType="date"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
-
-    <EditText
         android:id="@+id/showDate5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,13 +31,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="56dp"
+        android:labelFor="@id/spinner"
         android:text="@string/txt_expense_item"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/showDate2"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -85,11 +65,11 @@
         android:layout_marginStart="48dp"
         android:layout_marginBottom="627dp"
         android:autofillHints=""
-        android:clickable="true"
+        android:clickable="false"
+        android:editable="false"
         android:ems="10"
-        android:focusable="true"
+        android:focusable="false"
         android:hint="@string/date_hint"
-        android:inputType="date"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,5 +107,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
