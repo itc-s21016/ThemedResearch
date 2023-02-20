@@ -3,6 +3,7 @@ package jp.ac.it_college.std.s21016.themedresearch
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import java.sql.SQLException
 
 class SimpleDatabaseHelper(context: Context?) :
  SQLiteOpenHelper(context, DBNAME , null, VERSION) {
@@ -32,6 +33,32 @@ class SimpleDatabaseHelper(context: Context?) :
                     " VALUES('6', '通信費')")
             it.execSQL("INSERT INTO Item_information(Item_id, Item_name)" +
                     " VALUES('7', '給料')")
+            // データベースに登録する値を準備
+            val data = listOf(
+                mapOf("date" to "02/15", "expense_item_id" to "1", "Deposit_amount" to "10000", "Withdrawal_amount" to "1000" )
+            )
+
+            // トランザクションを開始
+            it.beginTransaction()
+            try {
+                //SQL命令を準備
+                val sql = it.compileStatement(
+                    "INSERT INTO Household_account_book(date, expense_item_id, Deposit_amount, Withdrawal_amount) VALUES(?, ?, ?)"
+                )
+                // 値を順に代入しながら、SQL命令を実行
+                data.forEach {
+                    sql.bindString(1, it["date"])
+                    sql.bindString(1, it["expense_item_id"])
+                    sql.bindString(1, it["Deposit_amount"])
+                    sql.bindString(1, it["Withdrawal_amount"])
+                    sql.executeInsert()
+                }
+                it.setTransactionSuccessful()
+            }catch (e: SQLException) {
+                e.printStackTrace()
+            } finally {
+                it.endTransaction()
+            }
         }
     }
 

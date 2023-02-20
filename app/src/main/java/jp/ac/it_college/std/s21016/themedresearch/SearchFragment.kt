@@ -6,7 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
+import android.widget.CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER
+import android.widget.SimpleCursorAdapter
 import android.widget.Spinner
 import androidx.navigation.Navigation
 import jp.ac.it_college.std.s21016.themedresearch.databinding.FragmentSearchBinding
@@ -14,16 +15,6 @@ import jp.ac.it_college.std.s21016.themedresearch.databinding.FragmentSearchBind
 class SearchFragment:Fragment() {
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
-
-    //val dbHelper = SimpleDatabaseHelper(context)
-
-    //val db = dbHelper.readableDatabase
-
-    val spinnerItems = arrayOf(
-        "hoge",
-        "hogepiyo",
-        "hogehogepudding"
-    )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -53,15 +44,21 @@ class SearchFragment:Fragment() {
     ): View? {
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
 
-        // ArrayAdapter
-        val adapter = ArrayAdapter(requireContext(),
-            android.R.layout.simple_spinner_item, spinnerItems)
+        val helper = SimpleDatabaseHelper(requireContext())
+        val sql = "SELECT Item_id as _id, Item_name FROM Item_information"
+        val cursor = helper.readableDatabase.rawQuery(sql, null)
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         // spinner に adapter をセット
         // View Binding
-        binding.spinner.adapter = adapter
+        binding.spinner.adapter = SimpleCursorAdapter(
+            requireContext(),
+            android.R.layout.simple_spinner_dropdown_item,
+            cursor,
+            arrayOf("Item_name"),
+            intArrayOf(android.R.id.text1),
+            FLAG_REGISTER_CONTENT_OBSERVER
+        )
 
         // リスナーを登録
         binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
