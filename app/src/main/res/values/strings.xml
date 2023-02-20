@@ -2,7 +2,7 @@
     <string name="app_name">ThemedResearch</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_text">家計簿アプリ</string>
+    <string name="title_text">家計簿くん</string>
     <string name="initial_setting_text">残高設定</string>
     <string name="zandaka">残高を入力してください</string>
     <string name="next">次へ</string>
