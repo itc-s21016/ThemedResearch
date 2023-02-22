@@ -33,6 +33,13 @@ class SimpleDatabaseHelper(context: Context?) :
                     " VALUES('6', '通信費')")
             it.execSQL("INSERT INTO Item_information(Item_id, Item_name)" +
                     " VALUES('7', '給料')")
+            it.execSQL("INSERT INTO Household_account_book(date, expense_item_id, Deposit_amount, Withdrawal_amount)" +
+                    " VALUES('1/1', '7', '50000', '')")
+            it.execSQL("INSERT INTO Household_account_book(date, expense_item_id, Deposit_amount, Withdrawal_amount)" +
+                    " VALUES('1/2', '1', '', '540')")
+            it.execSQL("INSERT INTO Household_account_book(date, expense_item_id, Deposit_amount, Withdrawal_amount)" +
+                    " VALUES('1/1', '5', '', '1000')")
+
             // データベースに登録する値を準備
             val data = listOf(
                 mapOf("date" to "02/15", "expense_item_id" to "1", "Deposit_amount" to "10000", "Withdrawal_amount" to "1000" )
