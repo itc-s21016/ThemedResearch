@@ -18,7 +18,7 @@ class SimpleDatabaseHelper(context: Context?) :
             it.execSQL("CREATE TABLE Item_information (" +
                     "Item_id INTEGER PRIMARY KEY, Item_name TEXT)")
             it.execSQL("CREATE TABLE Household_account_book (" +
-                    "date TEXT DEFAULT '1/1' NOT NULL, expense_item_id INTEGER DEFAULT '1' NOT NULL, Deposit_amount INTEGER, Withdrawal_amount INTEGER, FOREIGN KEY (expense_item_id) REFERENCES Item_information(Item_id))")
+                    "date TEXT DEFAULT '1/1', expense_item_id INTEGER DEFAULT '1', Deposit_amount INTEGER, Withdrawal_amount INTEGER, FOREIGN KEY (expense_item_id) REFERENCES Item_information(Item_id))")
             it.execSQL("INSERT INTO Item_information(Item_id, Item_name)" +
                     " VALUES('1', '食費')")
             it.execSQL("INSERT INTO Item_information(Item_id, Item_name)" +
@@ -33,12 +33,6 @@ class SimpleDatabaseHelper(context: Context?) :
                     " VALUES('6', '通信費')")
             it.execSQL("INSERT INTO Item_information(Item_id, Item_name)" +
                     " VALUES('7', '給料')")
-            it.execSQL("INSERT INTO Household_account_book(date, expense_item_id, Deposit_amount, Withdrawal_amount)" +
-                    " VALUES('1/1', '7', '50000', '')")
-            it.execSQL("INSERT INTO Household_account_book(date, expense_item_id, Deposit_amount, Withdrawal_amount)" +
-                    " VALUES('1/2', '1', '', '540')")
-            it.execSQL("INSERT INTO Household_account_book(date, expense_item_id, Deposit_amount, Withdrawal_amount)" +
-                    " VALUES('1/1', '5', '', '1000')")
 
             // データベースに登録する値を準備
             val data = listOf(
@@ -50,7 +44,7 @@ class SimpleDatabaseHelper(context: Context?) :
             try {
                 //SQL命令を準備
                 val sql = it.compileStatement(
-                    "INSERT INTO Household_account_book(date, expense_item_id, Deposit_amount, Withdrawal_amount) VALUES(?, ?, ?)"
+                    "INSERT INTO Household_account_book(date, expense_item_id, Deposit_amount, Withdrawal_amount) VALUES(?, ?, ?, ?)"
                 )
                 // 値を順に代入しながら、SQL命令を実行
                 data.forEach {

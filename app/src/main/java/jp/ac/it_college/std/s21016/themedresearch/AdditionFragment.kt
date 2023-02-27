@@ -23,7 +23,6 @@ class AdditionFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -55,13 +54,14 @@ class AdditionFragment : Fragment() {
             helper.writableDatabase.let { db ->
                 val cv = ContentValues().apply {
                     put("date", binding.showDate.text.toString())
-                    val citem: Cursor? =
-                        binding.spinner2.adapter.getItem(binding.spinner2.selectedItemPosition) as Cursor?
+                    //spinner からとってきた値をany型からcursor型に変えて渡している
+                    //any -> cursor? -> cursor
+                    val citem: Cursor? = binding.spinner2.adapter.getItem(binding.spinner2.selectedItemPosition) as Cursor?
                     with(citem!!) {
                         val expense_item_id = getInt(0)
                         put("expense_item_id",expense_item_id.toString())
                     }
-                put("Withdrawal_amount", binding.showDate5.text.toString())
+                put("Deposit_amount", binding.showDate5.text.toString())
             }
             db.insert("Household_account_book", null, cv)
             Toast.makeText(
