@@ -67,6 +67,9 @@
         <action
             android:id="@+id/action_additionFragment_to_myDialogFragment"
             app:destination="@id/myDialogFragment" />
+        <action
+            android:id="@+id/add_to_main"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/edditFragment"
